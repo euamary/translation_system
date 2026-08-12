@@ -1,80 +1,88 @@
-# 🌐 Sistema de Tradução
+# 🌐 Translation System
 
-Projeto desenvolvido em Ruby com o objetivo de criar um sistema capaz de traduzir frases entre idiomas utilizando uma API de tradução.
+A Ruby project developed to create a system capable of translating sentences between different languages using a translation API.
 
-Este projeto reúne diversos conceitos estudados durante o aprendizado de Ruby, como Programação Orientada a Objetos, requisições web, JSON, leitura e escrita de arquivos, entrada de dados pelo usuário e formatação de data e hora.
+This project brings together several concepts learned during my Ruby studies, including Object-Oriented Programming, web requests, JSON, file handling, user input, and date and time formatting.
 
-## 📌 Funcionalidades
+## 📌 Features
 
-- Solicita ao usuário uma frase para tradução;
-- Permite informar o idioma de origem e o idioma de destino;
-- Realiza a tradução através de uma requisição HTTP;
-- Trabalha com os dados retornados pela API em formato JSON;
-- Exibe a tradução realizada;
-- Salva o resultado da tradução em um arquivo `.txt`;
-- Utiliza data e hora para gerar o nome do arquivo;
-- Permite realizar várias traduções sem precisar reiniciar o programa.
+- Asks the user for a sentence to translate;
+- Allows the user to choose the source and target languages;
+- Performs translations through an HTTP request;
+- Handles API responses in JSON format;
+- Displays the translated text;
+- Saves the translation result in a `.txt` file;
+- Uses the current date and time to generate the file name;
+- Allows multiple translations without restarting the program.
 
-## 🛠️ Tecnologias e conceitos utilizados
+## 🛠️ Technologies and Concepts
 
 - Ruby
-- Programação Orientada a Objetos
-- Classes e métodos
+- Object-Oriented Programming (OOP)
+- Classes and methods
 - `require`
 - `Net::HTTP`
 - `URI`
 - JSON
-- Requisições HTTP
-- Entrada de dados com `gets.chomp`
-- Estruturas de repetição
+- HTTP requests
+- User input with `gets.chomp`
+- Loops
 - `break`
-- Leitura e escrita de arquivos
+- File reading and writing
 - `Time`
 - `strftime`
 
-## 📂 Estrutura do projeto
+## 📂 Project Structure
 
 ```text
-sistema_traducao/
+translation_system/
+├── assets/
+│   └── demo.gif
 ├── app.rb
-├── tradutor.rb
+├── translator.rb
 └── README.md
 ```
 
-## ▶️ Como executar
+## ▶️ How to Run
 
-No terminal, entre na pasta do projeto e execute:
+In the terminal, navigate to the project directory and run:
 
 ```bash
 ruby app.rb
 ```
 
-Depois, siga as instruções apresentadas no terminal para informar a frase e os idiomas desejados.
+Then follow the instructions displayed in the terminal to enter the sentence and select the source and target languages.
 
-## 🚧 Dificuldades encontradas
+## 🎬 Demo
 
-Durante o desenvolvimento do projeto, algumas das principais dificuldades foram:
+See the translation system in action:
 
-- Entender como funciona uma requisição HTTP e como o programa se comunica com uma API externa;
-- Compreender o formato JSON e como acessar as informações retornadas pela API;
-- Entender o significado de `responseData` e `translatedText` dentro da resposta recebida;
-- Compreender o funcionamento do `langpair` para definir o idioma de origem e o idioma de destino;
-- Entender para que servem as bibliotecas utilizadas através do `require`;
-- Organizar o código utilizando classes e métodos;
-- Entender melhor o funcionamento do `gets.chomp` na entrada de dados;
-- Trabalhar com arquivos para salvar as traduções realizadas;
-- Utilizar data e hora na criação do nome dos arquivos;
-- Implementar um loop para permitir que o usuário faça várias traduções sem precisar reiniciar o programa;
-- Entender o uso do `break` para encerrar o programa quando o usuário não quiser realizar outra tradução.
+![Translation System Demo](assets/demo.gif)
 
-## 📚 Aprendizados
+## 🚧 Challenges
 
-Com este projeto foi possível entender melhor como diferentes conceitos de Ruby podem trabalhar juntos em uma aplicação.
+During the development of this project, some of the main challenges were:
 
-Além da lógica de programação, o projeto ajudou a compreender como uma aplicação pode se comunicar com um serviço externo através de uma API, receber informações em JSON, tratar esses dados e utilizar o resultado dentro do programa.
+- Understanding how an HTTP request works and how the application communicates with an external API;
+- Understanding the JSON format and how to access the data returned by the API;
+- Understanding `responseData` and `translatedText` in the API response;
+- Understanding how `langpair` defines the source and target languages;
+- Understanding the purpose of the libraries imported with `require`;
+- Organizing the code using classes and methods;
+- Understanding how `gets.chomp` works when receiving user input;
+- Saving translation results into `.txt` files;
+- Using date and time to generate file names;
+- Implementing a loop to allow multiple translations without restarting the program;
+- Using `break` to stop the program when the user does not want to translate another sentence.
 
-Também foi possível praticar a organização do código, entrada de informações pelo usuário, estruturas de repetição e manipulação de arquivos.
+## 📚 What I Learned
 
-## 👩‍💻 Autora
+This project helped me understand how different Ruby concepts can work together in a complete application.
 
-Desenvolvido por Mariana.
+I learned how an application can communicate with an external API through HTTP requests, receive data in JSON format, process that data, and use the returned information in the program.
+
+I also practiced code organization, Object-Oriented Programming, user input, loops, and file handling.
+
+## 👩‍💻 Author
+
+Developed by Mariana.

@@ -1,4 +1,4 @@
-require_relative 'tradutor' # Carrega o arquivo tradutor.rb para usar a classe Tradutor
+require_relative 'translator' # Carrega o arquivo translator.rb para usar a classe Translator
 
 loop do # Inicia um loop para permitir múltiplas traduções
   puts
