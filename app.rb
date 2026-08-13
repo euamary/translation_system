@@ -2,26 +2,29 @@ require_relative 'translator' # Carrega o arquivo translator.rb para usar a clas
 
 loop do # Inicia um loop para permitir múltiplas traduções
   puts
-  print "Frase a traduzir: "
-  frase = gets.chomp # Lê a frase que o usuário deseja traduzir e remove o caractere de nova linha no final
 
-  print "Idioma de origem (ex: pt): "
-  de = gets.chomp
+  print "Phrase to translate: "
+  phrase = gets.chomp # Lê a frase que o usuário deseja traduzir e remove o caractere de nova linha no final
 
-  print "Idioma de destino (ex: en): "
-  para = gets.chomp
+  print "Source language (e.g., pt): "
+  from = gets.chomp
 
-  tradutor = Tradutor.new(frase, de, para) # Cria uma nova instância da classe Tradutor com a frase e os idiomas fornecidos pelo usuário
+  print "Target language (e.g., en): "
+  to = gets.chomp
 
-  resultado = tradutor.traduzir # Chama o método traduzir da classe Tradutor para obter a tradução da frase
+  translator = Translator.new(phrase, from, to) # Cria uma nova instância da classe Translator com a frase e os idiomas fornecidos pelo usuário
 
-  puts"\nTradução: #{resultado}" # Exibe a tradução obtida pelo método traduzir da classe Tradutor
+  result = translator.translate # Chama o método translate da classe Translator para obter a tradução da frase
 
-  tradutor.salvar(resultado) # Chama o método salvar para salvar a tradução em um arquivo de texto
+  puts "\nTranslation: #{result}" # Exibe a tradução obtida pelo método translate da classe Translator
 
-  puts "Tradução salva com sucesso!"
+  translator.save(result) # Chama o método save para salvar a tradução em um arquivo de texto
 
-  print "\nDeseja traduzir outra frase? (sim/não): " # Solicita ao usuário se deseja traduzir outra frase
-  resposta = gets.chomp.downcase # Lê a resposta do usuário e converte para minúsculas
-  break unless resposta == 'sim' # Sai do loop se a resposta não for 'sim'
+  puts "Translation saved successfully!"
+
+  print "\nWould you like to translate another phrase? (yes/no): " # Solicita ao usuário se deseja traduzir outra frase
+
+  answer = gets.chomp.downcase # Lê a resposta do usuário e converte para minúsculas
+
+  break unless answer == 'yes' # Sai do loop se a resposta não for 'yes'
 end
