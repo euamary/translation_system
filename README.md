@@ -37,7 +37,8 @@ This project brings together several concepts learned during my Ruby studies, in
 ```text
 translation_system/
 ├── assets/
-│   └── demo.gif
+│   ├── demo.gif
+│   └── demo2.gif
 ├── app.rb
 ├── translator.rb
 └── README.md
@@ -57,7 +58,8 @@ Then follow the instructions displayed in the terminal to enter the sentence and
 
 See the translation system in action:
 
-![Translation System Demo](assets/demo.gif)
+![Translation System Demo 1](assets/demo.gif)
+![Translation System Demo 2](assets/demo2.gif)
 
 ## 🚧 Challenges
 
